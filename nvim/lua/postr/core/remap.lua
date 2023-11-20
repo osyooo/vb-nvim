@@ -2,6 +2,13 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+
+-- buffer movement
+keymap.set("n", "<leader>]", vim.cmd.bnext)
+keymap.set("n", "<leader>[", vim.cmd.bprevious)
+keymap.set("n", "<leader>W", vim.cmd.bdelete)
+
+
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
